@@ -1,0 +1,9 @@
+.DS_Store
+Gemfile.lock
+tmp
+.rbenv-*
+.sass-cache
+pkg
+build
+.ruby-version
+.cache

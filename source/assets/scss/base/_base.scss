@@ -1,0 +1,55 @@
+// -------------------------------------------------------------------
+// Base
+// -------------------------------------------------------------------
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $base-font-family;
+  font-weight: 100;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $base-font-color;
+  background-color: $base_body_color;
+}
+
+::selection {
+  background: $blue;
+  text-shadow: none;
+}
+
+img {
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+
+  // Remove space below img
+  &.img {
+    display: block;
+  }
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+a {
+  @include button-reset;
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+
+  &:hover {
+    color: #CCCCCC;
+  }
+  &:active, &:focus {
+    color: #5C7FCC;
+    outline: none;
+  }
+}

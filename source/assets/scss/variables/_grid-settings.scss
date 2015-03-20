@@ -1,0 +1,20 @@
+// -------------------------------------------------------------------
+// Grid settings
+// -------------------------------------------------------------------
+
+$column: golden-ratio(1em, 3) !default; // Column width
+$gutter: golden-ratio(1em, 1) !default; // Gutter between each two columns
+
+$fg-column: $column; // for omega-reset() to work
+$fg-gutter: $gutter; // for omega-reset() to work
+
+$max_width: em(960); // .container width
+
+// Neat Breakpoints
+//
+// $medium_screen: em(640);
+// $large_screen: em(1120);
+
+$one_px: em(1); // for calculating max-width mq's
+$mobile-bp: 30em; // Set mobile breakpoint
+$mobile_only: max-width $mobile-bp - $one_px; // Usage: @include media($mobile_only) {}

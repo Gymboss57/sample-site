@@ -1,0 +1,95 @@
+// -------------------------------------------------------------------
+// Variables
+// -------------------------------------------------------------------
+
+// Dev
+// -------------------------------------------------------------------
+
+// Media query helper
+$show_media_queries: true;
+
+
+// Typography
+// -------------------------------------------------------------------
+
+// Fonts
+$sans_serif: "museo-sans", $helvetica;
+$serif: $georgia;
+
+// Base
+$base_font_family: $sans_serif;
+
+// Headings
+$header_font_family: $sans_serif;
+
+
+// Sizes
+// -------------------------------------------------------------------
+
+// Fonts
+$base_font_size: 1em;
+$base_line_height: $base_font_size * 1.5;
+
+// Gutters
+$gutter_width: flex-gutter($parent-columns); // calculates gutter in %
+
+// Border radius
+$base_border_radius: em(3);
+
+
+// Colors
+// -------------------------------------------------------------------
+
+$bay_red: #ec2b2f;
+$bay_orange: #f1943f;
+$bay_blue: #00a7e1;
+$bay_dark_blue: #0e76bc;
+$bay_yellow: #f8Bf32;
+$bay_green: #56A644;
+
+$primary: $bay_blue;
+$secondary: $bay_dark_blue;
+$tertiary: $bay_orange;
+
+$black: #000;
+$light_black: #444;
+
+$gray: #ccc;
+$dark_gray: #333;
+$medium_gray: #999;
+$light_gray: #ddd;
+
+$white: #fff;
+$white_smoke: #eee;
+$light_smoke: #f5f5f5;
+
+$red: #e74c3c;
+$light_red: #fbe3e4;
+
+$green: #2ecc71;
+$light_green: #e6efc2;
+
+$yellow: #f1c40f;
+$light_yellow: #fff6bf;
+
+$blue: #2379cf;
+
+
+// Color settings
+// -------------------------------------------------------------------
+
+// Body Color
+$base_body_color: $black;
+$base_font_color: $dark_gray;
+
+// Text Link Colors
+$link_color: $blue;
+$link_hover_color: darken($blue, 15);
+
+// Border color
+$base_border_color: $light_gray;
+
+// Flash Colors
+$error_color: $light_red;
+$notice_color: $light_yellow;
+$success_color: $light_green;

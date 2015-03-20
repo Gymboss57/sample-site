@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+
+  <title><%= (current_page.data.page_title || current_page.data.title).capitalize %> | <%= data.site.name %> </title>
+  <meta content="<%= current_page.data.description || data.site.description %>" name="description" />
+
+  <script type="text/javascript" src="//use.typekit.net/<%= data.site.typekitId %>.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <%= stylesheet_link_tag "all" %>
+  <%= yield_content :css %>
+
+  <!--<script src="/assets/js/libs/modernizr-custom.js"></script>-->
+</head>
+<body class="<%= page_classes %>">
+  <nav>
+    <div class="logo">
+      <a href="/">
+      <img src="/assets/img/devhouse.png" alt="">
+      </a>
+    </div>
+    <div class="site-nav">
+      <a href="#">Design</a><!----><a href="#">HTML</a><!----><a href="#">CSS</a><!----><a href="#">JS</a>
+    </div>
+  </nav>
+  <div class="container">
+  <%= yield %>
+  </div>
+
+  <div class="foot-nav">
+    <div class="footlogo">
+      <img src="/assets/img/devhouse.png" alt="">
+    </div>
+    <div class="left-nav">
+      <h2>DEVEOPMENT</h2>
+        <a href="">About <dev=house></a>
+        <a href="">Contact</a>
+        <a href="">Social Media</a>
+        <a href="">Our Team</a>
+    </div>
+    <div class="right-nav">
+      <h2>COMMUNITY</h2>
+        <a href="">Codepen</a>
+        <a href="">GitHub</a>
+        <a href="">Designs</a>
+        <a href="">Support</a>
+    </div>
+  </div>
+  <%= javascript_include_tag  "all" %>
+  <%= yield_content :js %>
+
+</body>
+</html>

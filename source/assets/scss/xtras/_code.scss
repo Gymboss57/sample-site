@@ -1,0 +1,35 @@
+// -------------------------------------------------------------------
+// Code
+// -------------------------------------------------------------------
+
+// Inline
+// ======
+
+p,li {
+  code {
+    padding: 0 .5em;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: .75em;
+    line-height: 1.75;
+    background: $light-smoke;
+    border: 1px solid darken($light-smoke, 10);
+  }
+}
+
+// Code blocks
+// ===========
+
+pre {
+  $font-size: 14;
+  margin: 0 0 em($base_margin, $font-size);
+  padding: em(12, $font-size) em(18, $font-size);
+  font-size: em($font-size);
+  line-height: 1.75;
+  background: $light-smoke;
+  border: 1px solid darken($light-smoke, 10);
+}
+pre[class*=language-] {
+  border: none;
+  background: lighten(#071022, 5);
+}

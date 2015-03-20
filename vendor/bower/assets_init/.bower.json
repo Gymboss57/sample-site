@@ -1,0 +1,13 @@
+{
+  "name": "assets_init",
+  "homepage": "https://github.com/joshfry/assets_init",
+  "_release": "4870b3720e",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "4870b3720ebaf622359f5c16b8a3840de1748745"
+  },
+  "_source": "https://github.com/joshfry/assets_init.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/joshfry/assets_init.git"
+}

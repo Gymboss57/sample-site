@@ -1,0 +1,180 @@
+// -------------------------------------------------------------------
+// Elements
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+// Paragraphs
+// -------------------------------------------------------------------
+
+p {
+  margin: 0 0 em($base_margin);
+}
+
+// -------------------------------------------------------------------
+// Lists
+// -------------------------------------------------------------------
+
+ul, ol {
+  margin: 0 0 em($base_margin);
+  padding-left: em(24);
+}
+
+// Nested lists
+// ============
+
+ul ul, ul ul ul,
+ol ol, ol ol ol {
+  margin-bottom: 0;
+}
+
+// nav > ul
+// ========
+
+nav {
+  ul {
+    margin: 0 0 em($base_margin);
+    padding: 0;
+    list-style: none;
+
+    ul, ul ul {
+      margin-bottom: 0;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+// Definition lists
+// ================
+
+dl {
+  margin: 0 0 em($base_margin);
+  line-height: $base-line-height;
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin: 0 0 em($base_margin / 2);
+  }
+}
+
+// Mixins
+// -------------------------------------------------------------------
+
+// Reset ul styles
+// ===============
+
+@mixin ul-reset {
+  margin: {
+    top: 0;
+    right: 0;
+    left: 0;
+  };
+  padding: 0;
+  list-style-type: none;
+}
+
+.ul-reset {
+  @include ul-reset;
+}
+
+// List of links
+// Allows <a>'s inside of <li>'s to be larger touch targets
+// ========================================================
+
+@mixin list-of-links {
+  @extend .ul-reset;
+
+  li {
+    margin: 0;
+    padding: 0;
+    a {
+      display: block;
+    }
+  }
+}
+
+@mixin list-of-links-horiz {
+  @extend .list-of-links;
+
+  li {
+    margin-right: em(16);
+    &, a {
+      display: inline-block;
+    }
+  }
+}
+
+.list-of-links { @include list-of-links; }
+.list-of-links-horiz { @include list-of-links-horiz; }
+
+// -------------------------------------------------------------------
+// Elements
+// -------------------------------------------------------------------
+
+hr {
+  margin: em($base_margin * 2) 0;
+  border: {
+    top: none;
+    right: none;
+    bottom: 1px solid $light_gray;
+    left: none;
+  }
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted $light_gray;
+  cursor: help;
+}
+
+address {
+  margin: 0 0 em($base_margin);
+  display: block;
+}
+
+hgroup {
+  margin: 0 0 em($base_margin / 2);
+}
+
+del {
+  color: lighten($base-font-color, 15);
+}
+
+blockquote {
+  margin: em($base_margin * 2) 0;
+  padding: em(16);
+  padding-right: 0;
+  color: $primary;
+  border-left: em(5) solid lighten($primary, 30);
+
+  blockquote {
+    margin: em($base_margin) 0;
+    border-left: em(5) solid lighten($primary, 40);
+  }
+
+  p {
+    font-size: em(20);
+    line-height: 1.3;
+    margin-bottom: 0;
+  }
+}
+
+cite {
+  font-family: $georgia;
+  font-size: em(14);
+  font-style: italic;
+  color: $dark-gray;
+
+  &:before {
+    content: '\2014 \00A0';
+  }
+}
+
+iframe {
+  display: block;
+}

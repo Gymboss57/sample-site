@@ -1,0 +1,14 @@
+{
+  "name": "middleman_init",
+  "description": "middleman_init",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "2.1.0",
+    "fastclick": "https://github.com/ftlabs/fastclick.git#~0.6.11",
+    "normalize-css": "~3.0.0",
+    "fitvids": "~1.1.0"
+  },
+  "devDependencies": {
+    "assets_init": "https://github.com/joshfry/assets_init.git"
+  }
+}

@@ -1,0 +1,226 @@
+// -------------------------------------------------------------------
+// Author
+// -------------------------------------------------------------------
+
+.container {
+  @include outer-container;
+  padding: 0 $base_line_height;
+}
+
+body {
+  background-color: #fff;
+}
+
+nav {
+  background-color: #2E70FF;
+  font-weight: 500;
+  padding: 50px 0;
+  background-image: url(/assets/img/ablue.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  box-shadow: 5px 5px 5px #999;
+  -moz-box-shadow: 5px 5px 5px #999;
+  -webkit-box-shadow: 5px 5px 5px #999;
+  @include media(30em) {
+    padding: 30px 0;
+  }
+
+}
+
+.logo {
+  @include span-columns(12);
+  margin-top: -50px;
+  text-align: center;
+  @include media(30em) {
+    @include span-columns(6);
+    margin-top: -38px;
+  }
+}
+
+.site-nav {
+  @include span-columns(12);
+  text-align: center;
+  @include media(30em) {
+    @include span-columns(6);
+    margin-top: -15px;
+  }
+}
+
+.site-nav a {
+  padding: 18px 10px 4px 10px;
+  background-color: rgba(255, 255, 255, 0.0);
+  -webkit-transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -ms-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  @include media(30em) {
+    padding: 18px 10px 23px 10px;
+  }
+}
+
+.site-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.banner {
+  text-align: center;
+  display: block;
+  background-image: url(/assets/img/beach.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  margin-top: 6px;
+}
+
+.banner img {
+  width: 60%;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.banner img:hover {
+  -webkit-opacity: 0.30;
+  -moz-opacity: 0.30;
+  opacity: 0.30;
+}
+
+.left {
+  @include span-columns(12);
+    @include media(30em) {
+    @include span-columns(6);
+  }
+}
+
+.left img {
+  height: 80px;
+  float: left;
+}
+
+.left .top h1 {
+  font-size: 43px;
+  margin: 20px 0 0 0;
+}
+
+.left h2 {
+  font-size: 35px;
+  margin: -10px 0 0 0;
+
+}
+
+h2:after {
+    content:' ';
+    display:block;
+    border:2px solid #d0d0d0;
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.left p {
+  color: #000;
+}
+
+.right {
+  @include span-columns(12);
+    @include media(30em) {
+    @include span-columns(6);
+    margin: 20px 0;
+  }
+}
+
+.right .textover p {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: rgba(0, 115, 240, 0.0);
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.0);
+  margin: 0px 0 0 0px;
+  padding: 65px 40px;
+  // padding: 75px 60px;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  @include media(30em) {
+    padding: 75px 60px;
+  }
+  @include media(60em) {
+    padding: 120px 130px;
+  }
+}
+
+.right .textover p:hover {
+  color: rgba(0, 115, 240, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.foot-nav {
+  background-color: #2E70FF;
+  padding-bottom: 150px;
+}
+
+.footlogo img {
+  margin-top: 40px;
+  @include span-columns(4);
+}
+
+.left-nav {
+  @include span-columns(4);
+}
+
+.left-nav a {
+  font-size: 10px;
+  font-weight: bolder;
+  text-align: left;
+  display: block;
+  color: #fff;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.left-nav a:hover {
+  color: #2E70FF;
+}
+
+.left-nav h2 {
+  font-size: 12px;
+  color: #fff;
+}
+
+.right-nav {
+  @include span-columns(4);
+}
+
+.right-nav h2 {
+  font-size: 12px;
+  color: #fff;
+}
+
+.right-nav a {
+  font-size: 10px;
+  font-weight: bolder;
+  text-align: left;
+  display: block;
+  color: #fff;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.right-nav a:hover {
+  color: #2E70FF;
+}
